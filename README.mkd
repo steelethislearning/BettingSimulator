@@ -1,4 +1,4 @@
-﻿# Betting Simulator
+# Betting Simulator
 
 This is a betting simulator based on the Lab in Head First C#.
 
