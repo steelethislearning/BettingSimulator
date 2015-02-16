@@ -1,0 +1,5 @@
+﻿# Betting Simulator
+
+This is a betting simulator based on the Lab in Head First C#.
+
+See http://www.headfirstlabs.com/books//hfcsharp/lab01.php for more info.
