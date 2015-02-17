@@ -135,6 +135,7 @@
             this.joeRadioButton.TabStop = true;
             this.joeRadioButton.Text = "joeRadioButton";
             this.joeRadioButton.UseVisualStyleBackColor = true;
+            this.joeRadioButton.CheckedChanged += new System.EventHandler(this.joeRadioButton_CheckedChanged);
             // 
             // bobRadioButton
             // 
@@ -146,6 +147,7 @@
             this.bobRadioButton.TabStop = true;
             this.bobRadioButton.Text = "bobRadioButton";
             this.bobRadioButton.UseVisualStyleBackColor = true;
+            this.bobRadioButton.CheckedChanged += new System.EventHandler(this.bobRadioButton_CheckedChanged);
             // 
             // alRadioButton
             // 
@@ -157,6 +159,7 @@
             this.alRadioButton.TabStop = true;
             this.alRadioButton.Text = "alRadioButton";
             this.alRadioButton.UseVisualStyleBackColor = true;
+            this.alRadioButton.CheckedChanged += new System.EventHandler(this.alRadioButton_CheckedChanged);
             // 
             // nameLabel
             // 
@@ -207,7 +210,6 @@
             0,
             0,
             0});
-            this.dogNumericUpDown.ValueChanged += new System.EventHandler(this.dogNumericUpDown_ValueChanged);
             // 
             // betsLabel
             // 
@@ -250,7 +252,6 @@
             0,
             0,
             0});
-            this.betNumericUpDown.ValueChanged += new System.EventHandler(this.betNumericUpDown_ValueChanged);
             // 
             // joeBetLabel
             // 

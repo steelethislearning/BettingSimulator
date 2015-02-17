@@ -22,6 +22,25 @@ namespace BettingSimulator
         {
             // Set my label to my bet's description, and the label on my
             // radio button to show my cash ("Joe has 43 bucks")
+            
+            MyRadioButton.Text = Name + " has " + Cash + " bucks";
+
+            if (MyBet == null)
+            {
+                MyBet = new Bet()
+                {
+                    Amount = 0,
+                    Dog = 0,
+                    Bettor = this
+                };
+
+                MyLabel.Text = MyBet.GetDescription();
+            }
+            else
+            {
+                //MyLabel.Text = Name + " bets " + MyBet.Amount + " on dog " + MyBet.Dog;
+                MyLabel.Text = MyBet.GetDescription();
+            }
         }
 
         public void ClearBet() { } // Reset my bet so it's zero
@@ -30,8 +49,22 @@ namespace BettingSimulator
         {
             // Place a new bet and store it in my bet field
             // Return true if the guy had enough money to bet
+            if (BetAmount < Cash)
+            {
+                MyBet = new Bet()
+                {
+                    Bettor = this,
+                    Amount = BetAmount,
+                    Dog = DogToWin
+                };
 
-            return true; // Placeholder
+                Cash = Cash - BetAmount;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public void Collect(int Winner)

@@ -19,7 +19,14 @@ namespace BettingSimulator
             // dog #4").  If the amount is zero, no bet was placed
             // ("Joe hasn't placed a bet").
 
-            return "Placeholder"; // Placeholder
+            if (Amount == 0)
+            {
+                return Bettor.Name + " hasn't placed a bet";
+            }
+            else
+            {
+                return Bettor.Name + " bets " + Amount + " on dog #" + Dog;
+            }
         }
 
         public int PayOut(int Winner)
