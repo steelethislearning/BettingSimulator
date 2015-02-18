@@ -22,12 +22,25 @@ namespace BettingSimulator
             //  MyPictureBox.Left = StartingPosition + Location;
             // Return true if I won the race
 
-            return true; // Placeholder
+            Location = Randomizer.Next(1, 5);
+            MyPictureBox.Left = MyPictureBox.Left + Location;
+
+            if (MyPictureBox.Left == RacetrackLength)
+            {
+                return true;
+            }
+            else 
+            {
+                return false;
+            }
+
         }
 
         public void TakeStartingPosition()
         {
             // Reset my location to 0 and my PictureBox to starting position
+            Location = 0;
+            MyPictureBox.Left = StartingPosition;
         }
     }
 }

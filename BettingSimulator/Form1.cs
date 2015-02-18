@@ -16,6 +16,8 @@ namespace BettingSimulator
 
         Guy[] guys = new Guy[3];
         Greyhound[] greyhounds = new Greyhound[4];
+        bool winner;
+        int winningDog;
 
         public Form1()
         {
@@ -73,9 +75,9 @@ namespace BettingSimulator
             };
             greyhounds[3] = new Greyhound()
             {
-                MyPictureBox = greyhound3PictureBox,
-                StartingPosition = greyhound3PictureBox.Left,
-                RacetrackLength = raceTrackPictureBox.Width - greyhound1PictureBox.Width,
+                MyPictureBox = greyhound4PictureBox,
+                StartingPosition = greyhound4PictureBox.Left,
+                RacetrackLength = raceTrackPictureBox.Width - greyhound4PictureBox.Width,
                 Randomizer = GameRandomizer
             };
 
@@ -87,15 +89,31 @@ namespace BettingSimulator
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            for (int i = 0; i < greyhounds.Length; i++)
+            {
+                winner = greyhounds[i].Run();
+                if (winner == true)
+                {
+                    timer1.Stop();
+                    MessageBox.Show("Dog #" + (i + 1) + " Won the race!", "Winner!");
+                    winningDog = i + 1;
+                    foreach (var guy in guys)
+                    {
+                        guy.Collect(winningDog);
+                    }
+                    foreach (var dog in greyhounds)
+                    {
+                        dog.TakeStartingPosition();
+                    }
+                    bettingParlorGroupBox.Enabled = true;
+                }
+            }               
         }
 
         private void raceButton_Click(object sender, EventArgs e)
         {
-            // Use the below line to disable controls when race is started.
-            //bettingParlorGroupBox.Enabled = false;
-
-
+            bettingParlorGroupBox.Enabled = false;
+            timer1.Start();
         }
 
         private void betButton_Click(object sender, EventArgs e)

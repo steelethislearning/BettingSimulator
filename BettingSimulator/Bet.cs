@@ -35,7 +35,15 @@ namespace BettingSimulator
             // return the amount bet.  Otherwise, return the negative of
             // the amount bet.
 
-            return 0; // Placeholder
+            if (Winner == Dog)
+            {
+                return Amount;
+            }
+            else
+            {
+                return Amount * -1;
+            }
+
         }
     }
 }

@@ -43,7 +43,9 @@ namespace BettingSimulator
             }
         }
 
-        public void ClearBet() { } // Reset my bet so it's zero
+        public void ClearBet() {
+            MyBet = null;
+        } // Reset my bet so it's zero
 
         public bool PlaceBet(int BetAmount, int DogToWin)
         {
@@ -57,12 +59,11 @@ namespace BettingSimulator
                     Amount = BetAmount,
                     Dog = DogToWin
                 };
-
-                Cash = Cash - BetAmount;
                 return true;
             }
             else
             {
+                MessageBox.Show(Name + " doesn't have enough money to bid this much!", "Bet too much!");
                 return false;
             }
         }
@@ -70,6 +71,9 @@ namespace BettingSimulator
         public void Collect(int Winner)
         {
             // Ask my bet to pay out, clear my bet, and update my labels
+            Cash = Cash + MyBet.PayOut(Winner);
+            ClearBet();
+            UpdateLabels();
         }
     }
 }
