@@ -73,15 +73,15 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 50;
+            this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // greyhound1PictureBox
             // 
             this.greyhound1PictureBox.Image = ((System.Drawing.Image)(resources.GetObject("greyhound1PictureBox.Image")));
-            this.greyhound1PictureBox.Location = new System.Drawing.Point(21, 25);
+            this.greyhound1PictureBox.Location = new System.Drawing.Point(12, 21);
             this.greyhound1PictureBox.Name = "greyhound1PictureBox";
-            this.greyhound1PictureBox.Size = new System.Drawing.Size(78, 23);
+            this.greyhound1PictureBox.Size = new System.Drawing.Size(64, 23);
             this.greyhound1PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.greyhound1PictureBox.TabIndex = 1;
             this.greyhound1PictureBox.TabStop = false;
@@ -89,9 +89,9 @@
             // greyhound2PictureBox
             // 
             this.greyhound2PictureBox.Image = ((System.Drawing.Image)(resources.GetObject("greyhound2PictureBox.Image")));
-            this.greyhound2PictureBox.Location = new System.Drawing.Point(21, 68);
+            this.greyhound2PictureBox.Location = new System.Drawing.Point(12, 69);
             this.greyhound2PictureBox.Name = "greyhound2PictureBox";
-            this.greyhound2PictureBox.Size = new System.Drawing.Size(78, 23);
+            this.greyhound2PictureBox.Size = new System.Drawing.Size(64, 23);
             this.greyhound2PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.greyhound2PictureBox.TabIndex = 2;
             this.greyhound2PictureBox.TabStop = false;
@@ -99,9 +99,9 @@
             // greyhound3PictureBox
             // 
             this.greyhound3PictureBox.Image = ((System.Drawing.Image)(resources.GetObject("greyhound3PictureBox.Image")));
-            this.greyhound3PictureBox.Location = new System.Drawing.Point(21, 122);
+            this.greyhound3PictureBox.Location = new System.Drawing.Point(12, 123);
             this.greyhound3PictureBox.Name = "greyhound3PictureBox";
-            this.greyhound3PictureBox.Size = new System.Drawing.Size(78, 23);
+            this.greyhound3PictureBox.Size = new System.Drawing.Size(64, 23);
             this.greyhound3PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.greyhound3PictureBox.TabIndex = 3;
             this.greyhound3PictureBox.TabStop = false;
@@ -109,9 +109,9 @@
             // greyhound4PictureBox
             // 
             this.greyhound4PictureBox.Image = ((System.Drawing.Image)(resources.GetObject("greyhound4PictureBox.Image")));
-            this.greyhound4PictureBox.Location = new System.Drawing.Point(21, 174);
+            this.greyhound4PictureBox.Location = new System.Drawing.Point(12, 172);
             this.greyhound4PictureBox.Name = "greyhound4PictureBox";
-            this.greyhound4PictureBox.Size = new System.Drawing.Size(78, 23);
+            this.greyhound4PictureBox.Size = new System.Drawing.Size(64, 23);
             this.greyhound4PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.greyhound4PictureBox.TabIndex = 4;
             this.greyhound4PictureBox.TabStop = false;
@@ -236,7 +236,7 @@
             // 
             this.betNumericUpDown.Location = new System.Drawing.Point(95, 132);
             this.betNumericUpDown.Maximum = new decimal(new int[] {
-            9999,
+            15,
             0,
             0,
             0});

@@ -22,10 +22,10 @@ namespace BettingSimulator
             //  MyPictureBox.Left = StartingPosition + Location;
             // Return true if I won the race
 
-            Location = Randomizer.Next(1, 5);
-            MyPictureBox.Left = MyPictureBox.Left + Location;
+            Location = Location + Randomizer.Next(1, 5);
+            MyPictureBox.Left = StartingPosition + Location;
 
-            if (MyPictureBox.Left == RacetrackLength)
+            if (MyPictureBox.Left >= RacetrackLength + StartingPosition)
             {
                 return true;
             }

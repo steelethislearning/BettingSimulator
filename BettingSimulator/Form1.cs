@@ -112,6 +112,10 @@ namespace BettingSimulator
 
         private void raceButton_Click(object sender, EventArgs e)
         {
+            if (winner == true)
+            {
+                winner = false;
+            }
             bettingParlorGroupBox.Enabled = false;
             timer1.Start();
         }
